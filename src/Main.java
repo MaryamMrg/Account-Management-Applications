@@ -1,22 +1,47 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
-    static ArrayList<Person> persons = new ArrayList<>();
-    static ArrayList<User> users = new ArrayList<>();
-    static ArrayList<Role> roles = new ArrayList<>();
+
+     static ArrayList<User> users = new ArrayList<>();
+     static ArrayList<Role> roles = new ArrayList<>();
+
+
 
    public static void add_user(){
 
+       System.out.println("======add a user=====");
+       System.out.println("enter the name of the user : ");
+       String name =sc.nextLine();
+       System.out.println("enter the age of user : ");
+       int age = Integer.parseInt(sc.nextLine());
+       System.out.println("enter the role of the user : ");
+       String role=sc.nextLine();
+       System.out.println("enter the email of the user : ");
+       String email = sc.nextLine();
+       System.out.println("enter the password : ");
+       String password = sc.nextLine();
+          User newUser = new User(name,age,role,email,password);
+       users.add(newUser);
+
+       System.out.println("user added successfully ");
    }
    public static void search_for_user(){
 
+           }
+   public static void update_user(){
+
    }
-   public static void update_user(){}
-   public static void delete_user(){}
-   public static void display_all_users(){}
+   public static void delete_user(){
+
+
+   }
+   public static void display_all_users(){
+
+   }
 
     public static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
