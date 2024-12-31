@@ -1,25 +1,30 @@
 public class Person {
-    protected String name;
-    protected int age;
-    protected String role;
+    String name ;
+    int age;
+    String CIN;
 
-    public Person(String name , int age, String role) {
-        this.name=name;
-        this.age=age;
-        this.role=role;
+    public Person(String nom, int age,String CIN) {
+        this.name = name;
+        this.age = age;
+        this.CIN = CIN;
+    }
+    public String getName() {
+        return name;
     }
 
-    public String getName() {return name;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void setName(String name) {this.name = name;}
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-    public int getAge() {return age;}
+    public int getAge() {
+        return age;
+    }
 
-    public void setAge(int age) {this.age = age;}
+    public String getCIN() {return CIN;}
 
-    public String getRole() {return role;}
-
-    public void setRole(String role) {this.role = role;}
-
-
+    public void setCIN(String CIN) {this.CIN = CIN;}
 }

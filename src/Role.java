@@ -1,18 +1,14 @@
-class Role  {
-   String role;
-   public Role(String role){
-      this.role=role;
-
+public class Role {
+   String rolename;
+   public Role(String rolename) {
+      this.rolename = rolename;
    }
 
-   public String getRole() {return role;}
+   public String getRolename() {
+      return rolename;
+   }
 
-   public void setRole(String role) {this.role = role;}
-
-   @Override
-   public String toString() {
-      return "Role{" +
-              "role='" + role + '\'' +
-              '}';
+   public void setRolename(String rolename) {
+      this.rolename = rolename;
    }
 }
