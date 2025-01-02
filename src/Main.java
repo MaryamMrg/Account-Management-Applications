@@ -17,19 +17,19 @@ public class Main {
             choice = input.nextInt();
             switch (choice){
                 case 1:
-                    GetiondeFonction.add();
+                    Methods.add();
                     break;
                 case 2:
-                    GetiondeFonction.display();
+                    Methods.display();
                     break;
                 case 3:
-                    GetiondeFonction.delete();
+                    Methods.delete();
                     break;
                 case 4:
-                    GetiondeFonction.search();
+                    Methods.search();
                     break;
                 case 5:
-                    GetiondeFonction.update();
+                    Methods.update();
                     break;
                 case 0:
                     System.out.println("thanks for your visit by (^-^)!!!!");

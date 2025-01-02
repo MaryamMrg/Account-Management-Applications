@@ -39,7 +39,7 @@ public class User extends Person {
     @Override
     public String toString() {
         return
-                "------AFFICHAGE UTILISATEUR A ETE AJOUTE------\n"+
+                "------user informations------\n"+
                         "Nom-------->  " + getName() +"\n"+
                         "CIN-------->  " +getCIN() +"\n"+
                         "Age-------->  "   +getAge()+"\n"+

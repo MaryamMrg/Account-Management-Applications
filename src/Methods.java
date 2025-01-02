@@ -1,13 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GetiondeFonction {
+public class Methods {
     public static Scanner input = new Scanner(System.in);
     public static ArrayList<User> users= new ArrayList<>();
 
+
+
+
     public static void add() {
         System.out.print("enter name: ");
-        String nom = input.next();
+        String name = input.next();
         System.out.print("enter AGE : ");
         int age = input.nextInt();
         System.out.print("enter N°CNIE : ");
@@ -19,7 +22,7 @@ public class GetiondeFonction {
         System.out.print("enter the role (Admin-worker-Client) : ");
         String rolname = input.next();
         Role role = new Role(rolname);
-        users.add(new User(nom, age, CIN, email, motdepass, role));
+        users.add(new User(name,age, CIN, email, motdepass, role));
 
     }
 
@@ -27,8 +30,8 @@ public class GetiondeFonction {
         if (users.isEmpty()) {
             System.out.println("no users added yet !!");
         }
-        for (User i : users) {
-            System.out.println(i);
+        for (int i =0;i<users.size();i++) {
+            System.out.println(users.get(i));
 
         }
     }
@@ -37,9 +40,10 @@ public class GetiondeFonction {
         System.out.print("enter the CNIE of the user you want to delete  : ");
         String CIN = input.next();
         boolean delete = false;
-        for (User i : users) {
-            if (i.getCIN().equals(CIN)) {
+        for (int i=0;i<users.size();i++) {
+            if (users.get(i).getCIN().equals(CIN)) {
                 users.remove(i);
+                System.out.println("user deleted successfully");
                 delete = true;
                 break;
             }
@@ -53,8 +57,8 @@ public class GetiondeFonction {
         System.out.print("Enter N°CNIE of the user you want to search for  : ");
         String CIN = input.next();
         boolean search = false;
-        for (User i : users) {
-            if (i.getCIN().equals(CIN)) {
+        for (int i=0;i<users.size();i++) {
+            if (users.get(i).getCIN().equals(CIN)) {
                 System.out.println(i);
                 search = true;
                 break;
@@ -69,8 +73,8 @@ public class GetiondeFonction {
         System.out.print("Enter N°CNIE to update the user  : ");
         String CIN = input.next();
         boolean update = false;
-        for (User i : users) {
-            if (i.getCIN().equals(CIN)) {
+        for (int i=0;i<users.size();i++) {
+            if (users.get(i).getCIN().equals(CIN)) {
                 int choice;
                 do {
                     System.out.println(" ! what do you want to update ?");
@@ -85,23 +89,23 @@ public class GetiondeFonction {
                     switch (choice) {
                         case 1:
                             System.out.print("udate the name : ");
-                            i.setName(input.next());
+                            users.get(i).setName(input.next());
                             break;
                         case 2:
                             System.out.print("update the Age : ");
-                            i.setAge(input.nextInt());
+                            users.get(i).setAge(input.nextInt());
                             break;
                         case 3:
                             System.out.print("update the Email : ");
-                            i.setEmail(input.next());
+                            users.get(i).setEmail(input.next());
                             break;
                         case 4:
                             System.out.print("update the password : ");
-                            i.setPassword(input.next());
+                            users.get(i).setPassword(input.next());
                             break;
                         case 5:
                             System.out.print("update the  Role : ");
-                            i.setRole(new Role(input.next()));
+                            users.get(i).setRole(new Role(input.next()));
                             break;
                         case 6:
                             System.out.println("operation passed successfully thank you !!");
